@@ -1,0 +1,114 @@
+[
+        {
+            "id":"prop1",
+			"type":"House",
+            "bedrooms":3,
+			"price":750000,
+			"tenure":"Freehold",
+			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+			"location":"Petts Wood Road, Petts Wood, Orpington BR5",
+			"picture":"/images/3.jpg",
+			"url":"properties/prop1.html",
+            "added": {
+                "month":"October",
+                "day":12,
+                "year":2022
+            }
+        },
+		{
+            "id":"prop2",
+			"type":"Flat",
+            "bedrooms":2,
+			"price":399995,
+			"tenure":"Freehold",
+			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
+			"location":"Crofton Road Orpington BR6",
+			"picture":"images/images4.jpg",
+			"url":"properties/prop2.html",
+            "added": {
+                "month":"September",
+                "day":14,
+                "year":2022
+            }
+        },
+        {
+            "id":"prop3",
+			"type":"Flat",
+            "bedrooms":4,
+			"price":850000,
+			"tenure":"Freehold",
+			"description":"Spacious four-bedroom flat with modern open-plan kitchen, bright living area, and balcony. Ideal for families looking for comfort in a central location. Close to shops and public transport.",
+			"location":"Kingston Road, Kingston Thames KT2",
+			"picture":"images/bungalow1.webp",
+			"url":"properties/prop3.html",
+            "added": {
+                "month":"April",
+                "day":28,
+                "year":2021
+            }
+        },
+        {
+            "id":"prop4",
+			"type":"Bungalow",
+            "bedrooms":6,
+			"price":2000000,
+			"tenure":"Leasehold",
+			"description":"Luxury six-bedroom bungalow with large garden, multiple reception rooms, and contemporary kitchen. Perfect for high-end living in a quiet neighborhood. Includes ample parking and private outdoor space.",
+			"location":"Meadow Lane, Richmond TW9",
+			"picture":"images/bun2.jpg",
+			"url":"properties/prop4.html",
+            "added": {
+                "month":"June",
+                "day":10,
+                "year":2022
+            }
+        },
+        {
+            "id":"prop5",
+			"type":"Flat",
+            "bedrooms":3,
+			"price":320000,
+			"tenure":"Freehold",
+			"description":"Modern three-bedroom flat featuring an open-plan lounge and kitchen. Ideal for professionals or small families. Conveniently located near public transport and local amenities.",
+			"location":"High Street, Croydon CR0",
+			"picture":"images/7.jpg",
+			"url":"properties/prop5.html",
+            "added": {
+                "month":"November",
+                "day":1,
+                "year":2021
+            }
+        },
+        {
+            "id":"prop6",
+			"type":"House",
+            "bedrooms":5,
+			"price":12000000,
+			"tenure":"Leasehold",
+			"description":"Magnificent five-bedroom detached house with luxury finishes, multiple reception rooms, and landscaped gardens. Includes state-of-the-art kitchen and home office. Situated in a prestigious area.",
+			"location":"Park Avenue, Chelsea SW3",
+			"picture":"images/7.webp",
+			"url":"properties/prop6.html",
+            "added": {
+                "month":"December",
+                "day":12,
+                "year":2022
+            }
+        },
+        {
+            "id":"prop7",
+			"type":"House",
+            "bedrooms":3,
+			"price":550000,
+			"tenure":"Freehold",
+			"description":"Charming three-bedroom house with cozy living spaces and a well-maintained garden. Perfect for families or first-time buyers. Close to schools, shops, and transport links.",
+			"location":"Elm Road, Wimbledon SW19",
+			"picture":"images/images.jpg",
+			"url":"properties/prop7.html",
+            "added": {
+                "month":"July",
+                "day":5,
+                "year":2021
+            }
+        }
+]
