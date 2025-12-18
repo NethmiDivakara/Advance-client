@@ -1,0 +1,16 @@
+.navbar {
+  width: 100%;            /* full width */
+  display: flex;
+  align-items: center;
+  background-color: #89CFF0;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 2rem 4.5rem;      /* space inside the header */
+ 
+              
+}
+
+.nav-title {
+  font-size: 25px;
+  font-weight: bold;
+  color:blue;
+}
