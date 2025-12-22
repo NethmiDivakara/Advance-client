@@ -14,13 +14,13 @@ export default function Favourites({ favourites, removeFavourite, clearFavourite
       <h3>Favourites</h3>
 
       {favourites.map((p) => (
-        <div key={p.id}>
+        <div key={p.id} className="favourite-item">
           {p.type}
           <button onClick={() => removeFavourite(p.id)}>Remove</button>
         </div>
       ))}
 
-      <button onClick={clearFavourites}>Clear All</button>
+      <button className="clear-btn" onClick={clearFavourites}>Clear All</button>
     </aside>
   );
 }

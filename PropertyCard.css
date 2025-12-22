@@ -1,3 +1,7 @@
+*{ margin: 0;
+  padding: 0;
+}
+ 
 .property-card {
   border: 1px solid #eee;
   border-radius: 10px;
@@ -22,7 +26,7 @@
   font-size: 20px;
   margin: 8px 0;
   text-align: center;
-  background:rgb(76, 139, 139);
+  background:rgb(0, 0, 0);
   
 }
 
@@ -31,13 +35,15 @@
   color: #b62039;
   font-weight: bold;
   margin: 2px 4px;
+  text-align: center;
 }
 
-.property-bedrooms {
+.property-info {
   font-size: 14px;
   color: #17b8b6;
   margin-top: 7px;
   margin-bottom: 1px;
+  text-align: center;
 }
 
 
