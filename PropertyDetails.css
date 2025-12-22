@@ -1,0 +1,44 @@
+.property-details-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #000; /* Makes all text black */
+}
+
+.property-details-page h2 {
+  font-size: 28px;
+  margin-top: 20px;
+  color: #000; /* Ensures heading is black */
+  text-align: center;
+}
+
+.property-details-page p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000; /* Ensures paragraph text is black */
+  margin: 8px 0;
+}
+
+.property-details-page p strong {
+  color: #000; /* Ensures bold text is black */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .property-details-page {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  .property-details-page h2 {
+    font-size: 24px;
+  }
+
+  .property-details-page p {
+    font-size: 14px;
+  }
+}
