@@ -1,0 +1,190 @@
+/* Reset some default browser styles */
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* App-wide styling */
+body {
+
+  background-color: #f5f7fa;
+}
+
+.main-content {
+  display: flex;          /* side by side */
+  align-items: flex-start; /* make both start at the top */
+  gap: 20px;              /* optional spacing between aside and cards */
+}
+
+/* Favourites aside */
+.favourites {
+  min-height: 600px;
+  width: 250px;           /* adjust width as needed */
+  background-color: #f4f4f4;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* PropertyList */
+.property-list {
+  flex: 1;                /* take remaining width */
+  display: flex;
+  flex-wrap: wrap;         /* cards wrap if screen is small */
+  gap: 20px;               /* space between cards */
+}
+
+  /* ===============================
+   Container for entire sort bar
+================================ */
+.sort-bar-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #e9d9d9;
+  border-radius: 8px;
+  gap: 15px;
+  font-family: Arial, sans-serif;
+}
+
+/* ===============================
+   Sort fields container
+================================ */
+.sort-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+ 
+}
+
+/* ===============================
+   Individual field container
+================================ */
+.sort-field-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+.sort-field-item label {
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  color:black;
+}
+
+
+/* ===============================
+   Unified input / dropdown styling
+================================ */
+.sort-field-item input,
+.sort-field-item select,
+.sort-field-item .rw-dropdownlist,
+.sort-field-item .rw-widget {
+  width: 150px;
+  height: 36px;
+  min-height: 36px;
+  font-size: 14px;
+  line-height: 36px;
+  padding: 0 6px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Price input specific */
+.price-input {
+  width: 120px;
+  height: 36px;
+  min-height: 36px;
+  padding: 0 6px;
+  font-size: 14px;
+  line-height: 36px;
+  color: black;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.price-input:focus {
+  outline: none; /* remove default blue outline */
+  border-color: #353090; /* match other fields */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* subtle blue glow */
+}
+
+
+/* Focus effect for all inputs and dropdowns */
+.sort-field-item input:focus,
+.sort-field-item select:focus,
+.sort-field-item .rw-dropdownlist:focus-within,
+.sort-field-item .rw-widget:focus-within {
+  outline: none;
+  border-color: #7a5c61;
+}
+
+/* ===============================
+   React Widgets DropdownList fix
+================================ */
+/* Force single row inside dropdown */
+.sort-field-item .rw-widget {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  height: 36px !important;
+  min-height: 36px;
+  box-sizing: border-box;
+}
+
+/* Input inside dropdown */
+.sort-field-item .rw-widget .rw-input {
+  flex: 1; /* fill remaining width */
+  height: 36px !important;
+  line-height: 36px;
+  font-size: 14px;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+
+/* Arrow button inside dropdown */
+.sort-field-item .rw-widget .rw-btn {
+  height: 36px !important;
+  min-height: 36px;
+}
+
+/* Dropdown popup */
+.sort-field-item .rw-popup {
+  z-index: 9999;
+}
+
+/* ===============================
+   Buttons container
+================================ */
+.sort-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Buttons styling */
+.sort-buttons button {
+  padding: 0 12px;
+  height: 36px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7a5c61;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.sort-buttons button:hover {
+  background-color: #5d454b;
+}
+
+
+
+
+

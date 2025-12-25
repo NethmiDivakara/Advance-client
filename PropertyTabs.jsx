@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import './PropertyTabs.css'; // import your custom CSS
+import './PropertyTabs.css'; // import custom CSS
 
 export default function PropertyTabs({ description, floorPlanUrl, mapEmbedUrl }) {
   return (
