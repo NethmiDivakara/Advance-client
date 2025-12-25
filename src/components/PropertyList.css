@@ -1,0 +1,28 @@
+.property-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.no-results {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+
+
+@media (max-width: 900px) {
+  .property-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .property-list {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+}
