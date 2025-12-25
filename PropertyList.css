@@ -1,9 +1,19 @@
 .property-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 3 cards per row */
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
+  justify-content: flex-start;
 }
+
+.no-results {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+
 
 @media (max-width: 900px) {
   .property-list {
