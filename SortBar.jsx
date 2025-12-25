@@ -1,44 +1,88 @@
 import React, { useState } from 'react';
+import { DropdownList } from 'react-widgets';
+import 'react-widgets/styles.css';
 import './SortBar.css';
 
 const SortBar = ({ onFilter }) => {
+  const [typeSort, setTypeSort] = useState('');
   const [priceSort, setPriceSort] = useState('');
   const [bedroomsSort, setBedroomsSort] = useState('');
-  const [dateSort, setDateSort] = useState('');
+  const [postcodeSort, setPostcodeSort] = useState('');
+  const [dateOrder, setDateOrder] = useState('');
 
   const handleFilter = () => {
-    // Pass all selected options to parent
-    onFilter({ priceSort, bedroomsSort, dateSort });
+    onFilter({ typeSort, priceSort, bedroomsSort, postcodeSort, dateOrder });
+  };
+
+  const clearFilters = () => {
+    setTypeSort('');
+    setPriceSort('');
+    setBedroomsSort('');
+    setPostcodeSort('');
+    setDateOrder('');
+    onFilter({ typeSort: '', priceSort: '', bedroomsSort: '', postcodeSort: '', dateOrder: '' });
   };
 
   return (
     <div className="sort-bar-container">
-      <label>Price:</label>
-      <select value={priceSort} onChange={(e) => setPriceSort(e.target.value)}>
-        <option value="">-- None --</option>
-        <option value="priceLowHigh">Low to High</option>
-        <option value="priceHighLow">High to Low</option>
-      </select>
-      
+      <div className="sort-fields">
+        <div className="sort-field-item">
+          <label>Type:</label>
+          <DropdownList
+            data={['House', 'Flat', 'Bungalow']}
+            value={typeSort}
+            onChange={setTypeSort}
+            placeholder="-- None --"
+          />
+        </div>
 
-      <label>Bedrooms:</label>
-      <select value={bedroomsSort} onChange={(e) => setBedroomsSort(e.target.value)}>
-        <option value="">-- None --</option>
-        <option value="bedroomsHighLow">Most to Least</option>
-        <option value="bedroomsLowHigh">Least to Most</option>
-      </select>
-      
+        <div className="sort-field-item">
+  <label>Price (max):</label>
+  <input
+    type="number"
+    className="price-input"
+    value={priceSort || ''}
+    onChange={(e) => setPriceSort(Number(e.target.value))}
+    placeholder="-- None --"
+  />
+</div>
 
-      <label>Date Added: </label>
-      <select value={dateSort} onChange={(e) => setDateSort(e.target.value)}>
-        <option value="">-- None --</option>
-        <option value="dateNewOld">Newest First</option>
-        <option value="dateOldNew">Oldest First</option>
-      </select>
-      
-      
 
-      <button onClick={handleFilter}>Filter</button>
+        <div className="sort-field-item">
+          <label>Bedrooms:</label>
+          <DropdownList
+            data={['1', '2', '3', '4+']}
+            value={bedroomsSort}
+            onChange={setBedroomsSort}
+            placeholder="-- None --"
+          />
+        </div>
+
+        <div className="sort-field-item">
+          <label>Date added:</label>
+          <DropdownList
+            data={['Newest to oldest', 'Oldest to newest']}
+            value={dateOrder}
+            onChange={setDateOrder}
+            placeholder="-- None --"
+          />
+        </div>
+
+        <div className="sort-field-item">
+          <label>Postcode:</label>
+          <DropdownList
+            data={['BR5', 'BR6', 'KT2']}
+            value={postcodeSort}
+            onChange={setPostcodeSort}
+            placeholder="-- None --"
+          />
+        </div>
+      </div>
+
+      <div className="sort-buttons">
+        <button onClick={handleFilter}>Filter</button>
+        <button onClick={clearFilters}>Clear</button>
+      </div>
     </div>
   );
 };
