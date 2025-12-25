@@ -58,3 +58,21 @@
   height: 400px;
   border: 0;
 }
+/* Tabs responsive */
+@media (max-width: 600px) {
+  .tab-list {
+    flex-direction: column;
+  }
+
+  .tab {
+    margin-bottom: 5px;
+  }
+
+  .tab-panel {
+    padding: 10px;
+  }
+
+  .map-frame {
+    height: 300px;
+  }
+}

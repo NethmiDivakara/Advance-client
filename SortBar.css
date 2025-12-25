@@ -1,59 +1,180 @@
-/* SortBar.css */
-
+/* ===============================
+   Container for entire sort bar
+================================ */
 .sort-bar-container {
-    padding: 10px 20px;
-    background-color: #e9d9d9;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Arial', sans-serif;
-    color:#181717;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #e9d9d9;
+  border-radius: 8px;
+  gap: 15px;
+  font-family: Arial, sans-serif;
 }
 
-.sort-bar-container label {
-    font-weight: bold;
-    font-size: 14px;
-    text-align: center;
+/* ===============================
+   Sort fields container
+================================ */
+.sort-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+ 
 }
 
-.sort-bar-container select {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    cursor: pointer;
-    transition: border-color 0.2s ease-in-out;
+/* ===============================
+   Individual field container
+================================ */
+.sort-field-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
 }
 
-.sort-bar-container select:hover {
-    opacity: 0.9;
-}
-
-/* Filter button styling */
-.sort-bar-container button {
-  height: 34px;               /* match the dropdown height */
-  padding: 2px 12px;            /* horizontal padding only */
-  font-size: 12px;            /* smaller text */
+.sort-field-item label {
+  width: 100px;
+  text-align: right;
   font-weight: bold;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
+  color:black;
+}
+
+
+/* ===============================
+   Unified input / dropdown styling
+================================ */
+.sort-field-item input,
+.sort-field-item select,
+.sort-field-item .rw-dropdownlist,
+.sort-field-item .rw-widget {
+  width: 110px;
+  height: 36px;
+  min-height: 36px;
+  font-size: 14px;
+  line-height: 36px;
+  padding: 0 6px;
   border-radius: 4px;
-  margin-left: 4rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-sizing: border-box;
 }
 
-.sort-bar-container button:hover {
-  background-color: #0056b3;
+/* Price input specific */
+.price-input {
+  width: 100px;
+  height: 26px;
+  min-height: 36px;
+  padding: 0 6px;
+  font-size: 14px;
+  line-height: 36px;
+  color: black;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.price-input:focus {
+  outline: none; /* remove default blue outline */
+  border-color: #353090; /* match other fields */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* subtle blue glow */
 }
 
-.sort-bar-container button:active {
-  transform: scale(0.95);
-}
 
-.sort-bar-container button:focus {
+/* Focus effect for all inputs and dropdowns */
+.sort-field-item input:focus,
+.sort-field-item select:focus,
+.sort-field-item .rw-dropdownlist:focus-within,
+.sort-field-item .rw-widget:focus-within {
   outline: none;
-  box-shadow: 0 0 3px rgba(0, 123, 255, 0.6);
+  border-color: #7a5c61;
+}
+
+/* ===============================
+   React Widgets DropdownList fix
+================================ */
+/* Force single row inside dropdown */
+.sort-field-item .rw-widget {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  height: 36px !important;
+  min-height: 36px;
+  box-sizing: border-box;
+}
+
+/* Input inside dropdown */
+.sort-field-item .rw-widget .rw-input {
+  flex: 1; /* fill remaining width */
+  height: 36px !important;
+  line-height: 36px;
+  font-size: 14px;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+
+/* Arrow button inside dropdown */
+.sort-field-item .rw-widget .rw-btn {
+  height: 36px !important;
+  min-height: 36px;
+}
+
+/* Dropdown popup */
+.sort-field-item .rw-popup {
+  z-index: 9999;
+}
+
+/* ===============================
+   Buttons container
+================================ */
+.sort-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Buttons styling */
+.sort-buttons button {
+  padding: 0 12px;
+  height: 36px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7a5c61;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.sort-buttons button:hover {
+  background-color: #5d454b;
+}
+/* Responsive adjustments for sort bar */
+@media (max-width: 768px) {
+  .sort-bar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sort-fields {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sort-field-item label {
+    width: 100%;
+    text-align: left;
+  }
+
+  .sort-field-item input,
+  .sort-field-item select,
+  .sort-field-item .rw-widget {
+    width: 100%;
+  }
+
+  .sort-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sort-buttons button {
+    width: 100%;
+  }
 }

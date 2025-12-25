@@ -1,16 +1,46 @@
+*{
+   margin: 0;
+  padding: 0;
+}
 .navbar {
   width: 100%;            /* full width */
   display: flex;
   align-items: center;
-  background-color: #89CFF0;
+  background-color:#bb6666ea;
   font-family: 'Times New Roman', Times, serif;
-  padding: 2rem 4.5rem;      /* space inside the header */
+  padding: 2rem 0rem;      /* space inside the header */
  
               
 }
 
 .nav-title {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
-  color:blue;
+  color:white;
+  margin-left: 2rem;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1.5rem 0;
+    justify-content: center;
+  }
+
+  .nav-title {
+    font-size: 24px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 0;
+  }
+
+  .nav-title {
+    font-size: 20px;
+  }
 }
